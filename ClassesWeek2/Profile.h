@@ -15,6 +15,8 @@ public:
 
 	void setStatus(std::string new_status); // setter
 
+	// methods
+
 	void addPostToProfilePage(std::string post); // adding post to the profile page
 	void addFriend(User friend_to_add); // adding friend to the friend list
 

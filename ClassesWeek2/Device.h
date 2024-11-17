@@ -24,10 +24,16 @@ class Device
 {
 public:
 	void init(unsigned int id, DeviceType type, std::string os); // initialization function - therefore won't be const.
+
+	// getters
 	unsigned int getID() const; // all getter functions are consts!
 	DeviceType getType() const;
 	std::string getOS() const;
+
+	// methods
 	bool isActive() const; // no changes happening to any fields, therefore -> const.
+
+	// setters
 	void activate(); // changes the _activated field
 	void deactivate(); // changes the _activated field
 
