@@ -23,13 +23,13 @@ enum DeviceType {PHONE, PC, LAPTOP, TABLET};		     //
 class Device
 {
 public:
-	void init(unsigned int id, DeviceType type, std::string os);
-	unsigned int getID() const;
+	void init(unsigned int id, DeviceType type, std::string os); // initialization function - therefore won't be const.
+	unsigned int getID() const; // all getter functions are consts!
 	DeviceType getType() const;
 	std::string getOS() const;
-	bool isActive() const;
-	void activate();
-	void deactivate();
+	bool isActive() const; // no changes happening to any fields, therefore -> const.
+	void activate(); // changes the _activated field
+	void deactivate(); // changes the _activated field
 
 private:
 

@@ -3,10 +3,12 @@
 
 void Device::init(unsigned int id, DeviceType type, std::string os)
 {
+	// initializing all of the fields
+
 	_id = id;
 	_type = type;
 	_os = os;
-	_activated = true;
+	_activated = true; // when initializing a new device - it is activated as default.
 }
 
 unsigned int Device::getID() const
