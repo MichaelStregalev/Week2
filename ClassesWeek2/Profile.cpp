@@ -4,7 +4,7 @@
 /*Initialization function*/
 void Profile::init(User owner)
 {
-	_owner.init(owner.getID(), owner.getUserName(), owner.getAge()); // initializing the owner's user
+	_owner = owner; // initializing the owner's user
 	_page.init(); // initializing the profile's page
 	_friends.init(); // initializing the friends list
 }
@@ -12,8 +12,6 @@ void Profile::init(User owner)
 /*Clearing function - cleaning the object, and also freeing all allocated memory*/
 void Profile::clear()
 {
-	_owner.clear(); // clearing the user owner
-
 	_page.clearPage(); // clearing the posts in the page
 	_page.setStatus(""); // clearing the status in the page
 
@@ -24,10 +22,7 @@ void Profile::clear()
 It will be a const function since it does not change or send any refrence to a field in the object.*/
 User Profile::getOwner() const
 {
-	User ownerReplica; // making a replica of the owner user
-	ownerReplica.init(_owner.getID(), _owner.getUserName(), _owner.getAge()); // initializing the information in the replica
-
-	return ownerReplica;
+	return _owner;
 }
 
 /*Setting the status of the profile*/

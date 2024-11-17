@@ -32,9 +32,7 @@ public:
 	void deactivate(); // changes the _activated field
 
 private:
-
-	// fields of Device!
-
+	// fields
 	unsigned int _id;
 	DeviceType _type;
 	std::string _os;

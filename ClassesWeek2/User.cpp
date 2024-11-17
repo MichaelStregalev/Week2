@@ -8,8 +8,7 @@ void User::init(unsigned int id, std::string username, unsigned int age)
 	_username = username;
 	_age = age;
 
-	_devices.set_first(nullptr); 
-	// setting the first device as nullptr (so we can later on recognize that the device list is empty)
+	_devices.init(); 
 }
 
 /*Clearing all the information in the user object and freeing all allocated memory*/
@@ -41,7 +40,7 @@ unsigned int User::getAge() const
 }
 
 /*Getting a refrence to the user's devices list*/
-DevicesList& User::getDevices()
+const DevicesList& User::getDevices() const
 {
 	return _devices;
 }
